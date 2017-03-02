@@ -1,0 +1,9 @@
+{
+	"name": "Get nav_menu_item children",
+	"type": "module",
+	"version": "0.1.0",
+	"description": "Returns and array of all children menu items of a parent nav_menu_item",
+	"files": [
+		"get-nav-menu-item-children.php"
+    ]	
+}
