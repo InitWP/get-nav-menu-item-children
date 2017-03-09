@@ -7,13 +7,13 @@
 * @param bool gives all children or direct children only
 * @return array returns filtered array of nav_menu_items
 */
-function TEXTDOMAIN_get_nav_menu_item_children( $parent_id, $nav_menu_items, $depth = true ) {
+function NAMESPACE_get_nav_menu_item_children( $parent_id, $nav_menu_items, $depth = true ) {
 	$nav_menu_item_list = array();
 	foreach ( (array) $nav_menu_items as $nav_menu_item ) {
 		if ( $nav_menu_item->menu_item_parent == $parent_id ) {
 			$nav_menu_item_list[] = $nav_menu_item;
 			if ( $depth ) {
-				if ( $children = TEXTDOMAIN_get_nav_menu_item_children( $nav_menu_item->ID, $nav_menu_items ) ) {
+				if ( $children = NAMESPACE_get_nav_menu_item_children( $nav_menu_item->ID, $nav_menu_items ) ) {
 					$nav_menu_item_list = array_merge( $nav_menu_item_list, $children );
 				}
 			}
